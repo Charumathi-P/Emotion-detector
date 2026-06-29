@@ -144,5 +144,3 @@ This project is licensed under the MIT License.
 **Your Name**
 Charumathi P
 ---
-
-⭐ Don't forget to star this repository if you found it useful!
