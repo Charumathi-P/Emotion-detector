@@ -1,0 +1,18 @@
+const formData = new FormData();
+formData.append("image", imageInput.files[0]);
+
+fetch("/predict", {
+    method: "POST",
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    result.innerHTML = `
+        ${data.emotion}<br>
+        Confidence: ${data.confidence}%
+    `;
+})
+.catch(error => {
+    result.innerHTML = "Error detecting emotion.";
+    console.error(error);
+});
